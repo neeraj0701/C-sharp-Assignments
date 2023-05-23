@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Assignment1_1
 {
-    internal class Assignment1
+    public class Assignment1
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             string string1 = Console.ReadLine();
             string string2 = Console.ReadLine();
