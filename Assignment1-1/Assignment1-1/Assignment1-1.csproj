@@ -43,8 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="substrings.cs" />
-    <Compile Include="validation.cs" />
+    <Compile Include="SubStrings.cs" />
+    <Compile Include="Validation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
