@@ -23,7 +23,8 @@ namespace Program1
                 }
             }
             SubStrings subStrings = new SubStrings();
-            Console.WriteLine("No.of times occured = "+subStrings.CountOfSubStrings(string1,string2));
+            Console.WriteLine(subStrings.CountOfSubStrings(string1,string2));
+            subStrings.IndexesOfSubStrings(string1,string2);
         }
     }
 }
