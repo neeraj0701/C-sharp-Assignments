@@ -8,10 +8,10 @@ namespace Program1
         {
             string string1 = Console.ReadLine();
             string string2 = Console.ReadLine();
-            Validation validate = new Validation();
+            Validation validation = new Validation();
             while (true)
             {
-                if (!validate.IsValid(string1, string2))
+                if (!validation.IsValid(string1, string2))
                 {
                     Console.WriteLine("check your input");
                     string1 = Console.ReadLine();
