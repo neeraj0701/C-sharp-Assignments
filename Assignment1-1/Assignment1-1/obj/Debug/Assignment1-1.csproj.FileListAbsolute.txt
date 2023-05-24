@@ -14,3 +14,11 @@ C:\Users\neera\Source\Repos\C-sharp-Assignments\Assignment1-1\Assignment1-1\obj\
 C:\Users\neera\Source\Repos\C-sharp-Assignments\Assignment1-1\Assignment1-1\obj\Debug\Assignment1-1.csproj.CoreCompileInputs.cache
 C:\Users\neera\Source\Repos\C-sharp-Assignments\Assignment1-1\Assignment1-1\obj\Debug\Assignment1-1.exe
 C:\Users\neera\Source\Repos\C-sharp-Assignments\Assignment1-1\Assignment1-1\obj\Debug\Assignment1-1.pdb
+C:\Users\Neeraj Potlapalli\Source\Repos\C-sharp-Assignments\Assignment1-1\Assignment1-1\bin\Debug\Assignment1-1.exe.config
+C:\Users\Neeraj Potlapalli\Source\Repos\C-sharp-Assignments\Assignment1-1\Assignment1-1\bin\Debug\Assignment1-1.exe
+C:\Users\Neeraj Potlapalli\Source\Repos\C-sharp-Assignments\Assignment1-1\Assignment1-1\bin\Debug\Assignment1-1.pdb
+C:\Users\Neeraj Potlapalli\Source\Repos\C-sharp-Assignments\Assignment1-1\Assignment1-1\obj\Debug\Assignment1-1.csproj.AssemblyReference.cache
+C:\Users\Neeraj Potlapalli\Source\Repos\C-sharp-Assignments\Assignment1-1\Assignment1-1\obj\Debug\Assignment1-1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Neeraj Potlapalli\Source\Repos\C-sharp-Assignments\Assignment1-1\Assignment1-1\obj\Debug\Assignment1-1.csproj.CoreCompileInputs.cache
+C:\Users\Neeraj Potlapalli\Source\Repos\C-sharp-Assignments\Assignment1-1\Assignment1-1\obj\Debug\Assignment1-1.exe
+C:\Users\Neeraj Potlapalli\Source\Repos\C-sharp-Assignments\Assignment1-1\Assignment1-1\obj\Debug\Assignment1-1.pdb
