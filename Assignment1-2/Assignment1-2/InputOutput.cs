@@ -10,9 +10,9 @@ public class InputOutput
         return number;
     }
 
-    public void DisplayInputValid() 
+    public void DisplayInputValid()
     {
-         Console.WriteLine("no. of digits should be more than or equal to four");
+        Console.WriteLine("no. of digits should be more than or equal to four");
     }
 
     public void DisplayOutput(int greatest)
