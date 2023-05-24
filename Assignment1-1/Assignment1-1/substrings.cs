@@ -50,7 +50,7 @@ public class SubStrings
         int lengthOfString1 = utilityFunctions.LengthOfString(string1);
         int lengthOfString2 = utilityFunctions.LengthOfString(string2);
         int[] indexes = new int[CountOfSubStrings(string1, string2)];
-        int index=0;
+        int index = 0;
 
         if (lengthOfString1 == lengthOfString2)
         {
@@ -74,7 +74,7 @@ public class SubStrings
                 }
             }
         }
-        
+
         return indexes;
     }
 }

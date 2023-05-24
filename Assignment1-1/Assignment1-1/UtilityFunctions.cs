@@ -30,11 +30,11 @@ public class UtilityFunctions
     /// <param name="start"></param>
     /// <param name="length"></param>
     /// <returns></returns>
-    public string SubStringsOfString(string chars,int start,int length)
+    public string SubStringsOfString(string chars, int start, int length)
     {
-        string subStr="";
+        string subStr = "";
 
-        for(int i = start; i < start + length; i++)
+        for (int i = start; i < start + length; i++)
         {
             subStr += chars[i];
         }

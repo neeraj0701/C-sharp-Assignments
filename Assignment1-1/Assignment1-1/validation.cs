@@ -1,58 +1,49 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using Program1;
-    
+
+/// <summary>
+/// class for method IsValid 
+/// </summary>
+public class Validation
+{
     /// <summary>
-    /// class used for validation of inputs
+    /// validates the inputs
     /// </summary>
-    public class Validation
-    {       
-        /// <summary>
-        /// validates the string1
-        /// </summary>
-        /// <param name="string1"></param>
-        /// <returns></returns>
-        public bool IsInput1Valid(string string1)
-        {
-            UtilityFunctions utilityFunctions = new UtilityFunctions();
-            if (utilityFunctions.LengthOfString(string1)==0) 
-            { 
-                return false;
-            }
-            
-            return true;
-        }
-        
-        /// <summary>
-        /// validate the string2
-        /// </summary>
-        /// <param name="string2"></param>
-        /// <returns></returns>
-        public bool IsInput2Valid(string string2) 
-        {
-            UtilityFunctions utilityFunctions = new UtilityFunctions();
-            if (utilityFunctions.LengthOfString(string2) == 0)
-            {
-                return false;
-            }
+    /// <param name="string1"></param>
+    /// <returns></returns>
+    public bool IsValid(string string1, string string2)
+    {
+        UtilityFunctions utilityFunctions = new UtilityFunctions();
+        InputOutput inputOutput = new InputOutput();
 
-            return true;
-        }
-        
-        /// <summary>
-        /// validates that string1 has more length than string2
-        /// </summary>
-        /// <param name="string1"></param>
-        /// <param name="string2"></param>
-        /// <returns></returns>
-        public bool IsValid(string string1,string string2)
+        if (string1 == string.Empty && string2 == string.Empty)
         {
-            UtilityFunctions utilityFunctions = new UtilityFunctions();
-            if(utilityFunctions.LengthOfString(string1) < utilityFunctions.LengthOfString(string2))
-            {
-                return false;
-            }
+            inputOutput.DisplayInputValidate(0);
+            return false;
+        }
 
+        else if (string1 == string.Empty)
+        {
+            inputOutput.DisplayInputValidate(1);
+            return false;
+        }
+
+        else if (string2 == string.Empty && string2 == string.Empty)
+        {
+            inputOutput.DisplayInputValidate(2);
+            return false;
+        }
+
+        else if (utilityFunctions.LengthOfString(string1) < utilityFunctions.LengthOfString(string2))
+        {
+            inputOutput.DisplayInputValidate(3);
+            return false;
+        }
+        else
+        {
             return true;
         }
+
     }
-
+}
