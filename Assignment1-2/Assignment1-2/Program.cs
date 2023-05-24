@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 
 namespace Program2
 {
@@ -6,10 +7,12 @@ namespace Program2
     {
         public static void Main(string[] args)
         {
-            String input = Console.ReadLine();
+            InputOutput inputOutput = new InputOutput();
+            BigInteger bigInteger = BigInteger.Parse(inputOutput.Input());
+            String larger = bigInteger.ToString();
             Validation validate = new Validation();
 
-            if (!validate.IsValid(input))
+            if (!validate.IsValid(larger))
             {
                 Console.WriteLine("wrong input");
             }
