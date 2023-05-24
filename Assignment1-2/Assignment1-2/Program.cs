@@ -17,10 +17,10 @@ namespace Program2
                 Console.WriteLine("wrong input");
             }
 
-            int[] large = new int[input.Length];
-            for(int i = 0; i < input.Length; i++)
+            int[] large = new int[larger.Length];
+            for(int i = 0; i < larger.Length; i++)
             {
-                large[i] = input[i];
+                large[i] = larger[i];
             }
             //String large = bigInteger.ToString();
             //GreatestProduct greatestProduct = new GreatestProduct();
