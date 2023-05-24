@@ -1,12 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Program1;
 
-namespace Assignment1_1
+public class Functions
 {
-    internal class Functions
+    // the below method will returns length of string
+    public static int LengthOfString(string chars)
     {
+        int counter = 0;
+
+        foreach (char c in chars)
+        {
+            counter++;
+        }
+
+        return counter;
+    }
+
+    //the below method will returns substring of string
+    public static string SubStringsOfString(string chars,int start,int length)
+    {
+        string subStr="";
+
+        for(int i = start; i < start + length; i++)
+        {
+            subStr += chars[i];
+        }
+
+        return subStr;
     }
 }
+
