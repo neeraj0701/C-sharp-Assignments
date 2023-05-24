@@ -1,38 +1,46 @@
 ﻿using System;
-using System.Threading;
 
 namespace Program1
 {
+    /// <summary>
+    /// class that contains main method
+    /// </summary>
     public class Program
     {
-        public static  void Main(string[] args)
+        /// <summary>
+        /// below is main method where execution begins
+        /// </summary>
+        public static void Main(string[] args)
         {
-            Console.WriteLine("enter the first string");
-            string string1 = Console.ReadLine();
-            Console.WriteLine("enter the second string");
-            string string2 = Console.ReadLine();
+            InputOutput inputOutput = new InputOutput();
+            string string1 = inputOutput.Input1();
+            string string2 = inputOutput.Input2();
             Validation validation = new Validation();
 
-            //its check whether given input is correct or wrong
-            if (!validation.IsValid(string1, string2))
+            if (!validation.IsInput1Valid(string1) && !validation.IsInput2Valid(string2))
             {
-                Console.WriteLine("wrong input");
+                inputOutput.DisplayInputValidate(0);
+            }
+
+            else if (!validation.IsInput1Valid(string1))
+            {
+               inputOutput.DisplayInputValidate(1);
+            }
+
+            else if (!validation.IsInput2Valid(string2))
+            {
+                inputOutput.DisplayInputValidate(2);
+            }
+
+            else if (!validation.IsValid(string1, string2))
+            {
+                inputOutput.DisplayInputValidate(3);
             }
 
             else
             {
-                SubStrings subStrings = new SubStrings(string1, string2);
-                Console.WriteLine("no. of times occured : " + subStrings.CountOfSubStrings(string1, string2));
-                int[] indexes = subStrings.IndexesOfSubStrings(string1, string2);
-                Console.Write("index positions : ");
-
-                if (subStrings.CountOfSubStrings(string1,string2)>0)
-                {   
-                    for(int iterator = 0;iterator < subStrings.CountOfSubStrings(string1, string2); iterator++)
-                    {
-                        Console.Write(indexes[iterator]+" ");
-                    }
-                }
+                SubStrings subStrings = new SubStrings();
+                inputOutput.DisplayOutput(subStrings.CountOfSubStrings(string1, string2), subStrings.IndexesOfSubStrings(string1, string2), subStrings.CountOfSubStrings(string1, string2));
             }
         }
     }

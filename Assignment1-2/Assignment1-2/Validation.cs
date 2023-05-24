@@ -1,21 +1,19 @@
 ﻿using System;
-using System.Numerics;
 using Program2;
 
 public class Validation
 {
-    public bool IsValid(BigInteger bigInteger)
+    public bool IsValid(string input)
     {
-        int reminder = 0, count = 0;
-
-        while (bigInteger > 0 && count <= 4)
+        for(int i = 0; i < input.Length; i++)
         {
-            reminder = (int)bigInteger % 10;
-            count++;
-            bigInteger /= 10;
+            if (!(input[i]-'0' >=0  && input[i]-'0' <=9))
+            {
+                return false;
+            }
         }
 
-        if (count < 4)
+        if (input.Length < 4)
         {
             return false;
         }

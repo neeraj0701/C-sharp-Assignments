@@ -1,21 +1,22 @@
 ﻿using System;
 using Program1;
 
+/// <summary>
+/// used for logic purpose
+/// </summary>
 public class SubStrings
 {
-    int lengthOfString1;
-    int lengthOfString2;
-
-    //below constructor will initialize above values
-    public SubStrings(string string1,string string2) 
-    {
-        lengthOfString1 = Functions.LengthOfString(string1);
-        lengthOfString2 = Functions.LengthOfString(string2);
-    }
-
-    //below method will returns the count of string2 occurred in string1
+    /// <summary>
+    /// logic for count of substrings in string
+    /// </summary>
+    /// <param name="string1"></param>
+    /// <param name="string2"></param>
+    /// <returns></returns>
     public int CountOfSubStrings(string string1, string string2)
     {
+        UtilityFunctions utilityFunctions = new UtilityFunctions();
+        int lengthOfString1 = utilityFunctions.LengthOfString(string1);
+        int lengthOfString2 = utilityFunctions.LengthOfString(string2);
         int counter = 0;
 
         if (lengthOfString1 == lengthOfString2 && string1 == string2)
@@ -27,7 +28,7 @@ public class SubStrings
         {
             for (int iterator = 0; iterator < lengthOfString1 - (lengthOfString2 - 1); iterator++)
             {
-                if (Functions.SubStringsOfString(string1, iterator, lengthOfString2) == string2)
+                if (utilityFunctions.SubStringsOfString(string1, iterator, lengthOfString2) == string2)
                 {
                     counter++;
                 }
@@ -37,9 +38,17 @@ public class SubStrings
         return counter;
     }
 
-    //its prints the starting index positions where string2 is occurred in string1
+    /// <summary>
+    /// count of starting index positions where string2 is occurred in string1
+    /// </summary>
+    /// <param name="string1"></param>
+    /// <param name="string2"></param>
+    /// <returns></returns>
     public int[] IndexesOfSubStrings(string string1, string string2)
     {
+        UtilityFunctions utilityFunctions = new UtilityFunctions();
+        int lengthOfString1 = utilityFunctions.LengthOfString(string1);
+        int lengthOfString2 = utilityFunctions.LengthOfString(string2);
         int[] indexes = new int[CountOfSubStrings(string1, string2)];
         int index=0;
 
@@ -55,7 +64,7 @@ public class SubStrings
         {
             for (int iterator = 0; iterator < lengthOfString1 - (lengthOfString2 - 1); iterator++)
             {
-                if (Functions.SubStringsOfString(string1, iterator, lengthOfString2) == string2)
+                if (utilityFunctions.SubStringsOfString(string1, iterator, lengthOfString2) == string2)
                 {
                     if (index < CountOfSubStrings(string1, string2))
                     {

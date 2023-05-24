@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Numerics;
 
 namespace Program2
 {
@@ -7,26 +6,22 @@ namespace Program2
     {
         public static void Main(string[] args)
         {
-            BigInteger bigInteger = BigInteger.Parse(Console.ReadLine());
+            String input = Console.ReadLine();
             Validation validate = new Validation();
 
-            while (true)
+            if (!validate.IsValid(input))
             {
-                if (!validate.IsValid(bigInteger))
-                {
-                    Console.WriteLine("check your input");
-                    bigInteger = BigInteger.Parse(Console.ReadLine());
-                }
-
-                else
-                {
-                    break;
-                }
+                Console.WriteLine("wrong input");
             }
-            
-            String large = bigInteger.ToString();
-            GreatestProduct greatestProduct = new GreatestProduct();
-            Console.WriteLine(greatestProduct.greatestAdjacentDigitsProduct(large));
+
+            int[] large = new int[input.Length];
+            for(int i = 0; i < input.Length; i++)
+            {
+                large[i] = input[i];
+            }
+            //String large = bigInteger.ToString();
+            //GreatestProduct greatestProduct = new GreatestProduct();
+            //Console.WriteLine(greatestProduct.greatestAdjacentDigitsProduct(large));
         }
     }
 }
