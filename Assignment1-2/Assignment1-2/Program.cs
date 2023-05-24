@@ -8,23 +8,15 @@ namespace Program2
         public static void Main(string[] args)
         {
             InputOutput inputOutput = new InputOutput();
+            GreatestProduct greatestProduct = new GreatestProduct();
             BigInteger bigInteger = BigInteger.Parse(inputOutput.Input());
-            String larger = bigInteger.ToString();
             Validation validate = new Validation();
 
-            if (!validate.IsValid(larger))
+            if (validate.IsValid(bigInteger))
             {
-                Console.WriteLine("wrong input");
+                string large = bigInteger.ToString();
+                inputOutput.DisplayOutput(greatestProduct.GreatestAdjacentDigitsProduct(large));
             }
-
-            int[] large = new int[larger.Length];
-            for(int i = 0; i < larger.Length; i++)
-            {
-                large[i] = larger[i];
-            }
-            //String large = bigInteger.ToString();
-            //GreatestProduct greatestProduct = new GreatestProduct();
-            //Console.WriteLine(greatestProduct.greatestAdjacentDigitsProduct(large));
         }
     }
 }

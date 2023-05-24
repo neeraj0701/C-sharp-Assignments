@@ -3,11 +3,12 @@ using Program2;
 
 public class GreatestProduct
 {
-    public int greatestAdjacentDigitsProduct(string large)
+    public int GreatestAdjacentDigitsProduct(string large)
     {
+        UtilityFunctions utilityFunctions = new UtilityFunctions();
         int maximum = 0, product = 0;
 
-        if (large.Length == 4)
+        if (utilityFunctions.LengthOfString(large) == 4)
         {
             maximum = (large[0] - '0') * (large[1] - '0') * (large[2] - '0') * (large[3] - '0');
         }
