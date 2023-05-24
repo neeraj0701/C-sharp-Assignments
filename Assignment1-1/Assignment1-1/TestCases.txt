@@ -1,0 +1,8 @@
+﻿Test Cases:
+
+1.string1 length is 0 --negative testcase
+2.string1 length is greater than 0 --positive testcase
+3.string2 length is 0 --negative testcase
+4.string2 length is greater than 0 --positive testcase
+5.string1 length is greater than string2 --positive testcase
+6.string2 length is lesser than string2 --negative testcase
