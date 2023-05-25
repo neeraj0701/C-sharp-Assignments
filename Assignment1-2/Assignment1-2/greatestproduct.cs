@@ -1,6 +1,9 @@
 ﻿using System;
 using Program2;
 
+/// <summary>
+/// contains methods which implememts solution
+/// </summary>
 public class GreatestProduct
 {
     public int GreatestAdjacentDigitsProduct(string large)
