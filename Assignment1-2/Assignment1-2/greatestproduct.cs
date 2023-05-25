@@ -18,9 +18,9 @@ public class GreatestProduct
 
         else
         {
-            for (int i = 0; i < large.Length - 3; i++)
+            for (int iterator = 0; iterator < large.Length - 3; iterator++)
             {
-                product = (large[i] - '0') * (large[i + 1] - '0') * (large[i + 2] - '0') * (large[i + 3] - '0');
+                product = (large[iterator] - '0') * (large[iterator + 1] - '0') * (large[iterator + 2] - '0') * (large[iterator + 3] - '0');
 
                 if (maximumProduct < product)
                 {
