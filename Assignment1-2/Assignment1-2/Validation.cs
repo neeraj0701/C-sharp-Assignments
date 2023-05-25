@@ -1,24 +1,28 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Numerics;
 using Program2;
 
 public class Validation
 {
-    public bool IsValid(string input)
+    public bool IsValid(BigInteger bigInteger)
     {
-        for(int i = 0; i < input.Length; i++)
+        InputOutput inputOutput = new InputOutput();
+        int counter = 0;
+
+        while (counter <= 4)
         {
-            if (!(input[i]-'0' >=0  && input[i]-'0' <=9))
-            {
-                return false;
-            }
+            bigInteger = bigInteger / 10;
+            counter++;
         }
 
-        if (input.Length < 4)
+        if (bigInteger < 4)
         {
+            inputOutput.DisplayInputValid();
             return false;
         }
 
         return true;
-    } 
+    }
 }
 
