@@ -6,11 +6,11 @@ public class GreatestProduct
     public int GreatestAdjacentDigitsProduct(string large)
     {
         UtilityFunctions utilityFunctions = new UtilityFunctions();
-        int maximum = 0, product = 0;
+        int maximumProduct = 0, product = 0;
 
         if (utilityFunctions.LengthOfString(large) == 4)
         {
-            maximum = (large[0] - '0') * (large[1] - '0') * (large[2] - '0') * (large[3] - '0');
+            maximumProduct = (large[0] - '0') * (large[1] - '0') * (large[2] - '0') * (large[3] - '0');
         }
 
         else
@@ -19,13 +19,13 @@ public class GreatestProduct
             {
                 product = (large[i] - '0') * (large[i + 1] - '0') * (large[i + 2] - '0') * (large[i + 3] - '0');
 
-                if (maximum < product)
+                if (maximumProduct < product)
                 {
-                    maximum = product;
+                    maximumProduct = product;
                 }
             }
         }
 
-        return maximum;
+        return maximumProduct;
     }
 }

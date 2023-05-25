@@ -10,6 +10,7 @@ namespace Program2
             InputOutput inputOutput = new InputOutput();
             GreatestProduct greatestProduct = new GreatestProduct();
             BigInteger bigInteger = BigInteger.Parse(inputOutput.Input());
+            Console.WriteLine(bigInteger);
             Validation validate = new Validation();
 
             if (validate.IsValid(bigInteger))

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Numerics;
 using Program2;
 
@@ -16,7 +15,7 @@ public class Validation
             counter++;
         }
 
-        if (bigInteger < 4)
+        if (counter < 4)
         {
             inputOutput.DisplayInputValid();
             return false;
