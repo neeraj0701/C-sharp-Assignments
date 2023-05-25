@@ -31,7 +31,7 @@ public class InputOutput
     /// <param name="greatest"></param>
     public void DisplayOutput(int greatest)
     {
-        Console.WriteLine(greatest);
+        Console.WriteLine("greatest adjacent digits product : "+greatest);
     }
 }
 
