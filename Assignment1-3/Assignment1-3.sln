@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment1-3", "Assignment1-3\Assignment1-3.csproj", "{D875920F-036B-480A-A7E0-D782C5502594}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q3 Adding Two Binaries", "Assignment1-3\Q3 Adding Two Binaries.csproj", "{D875920F-036B-480A-A7E0-D782C5502594}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

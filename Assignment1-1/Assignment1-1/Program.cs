@@ -13,9 +13,9 @@ namespace Program1
         public static void Main(string[] args)
         {
             InputOutput inputOutput = new InputOutput();
+            Validation validation = new Validation();
             string string1 = inputOutput.Input1();
             string string2 = inputOutput.Input2();
-            Validation validation = new Validation();
 
             if (validation.IsValid(string1, string2))
             {
