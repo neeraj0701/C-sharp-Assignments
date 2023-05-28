@@ -94,7 +94,6 @@ public class AddingBinaries
                 sum = (number1[length1] - '0') + (number2[length2] - '0') + carry;
                 carry = sum / 2;
                 number = (sum % 2) + number;
-                Console.WriteLine(number);
             }
 
             length1--;
