@@ -12,7 +12,6 @@ namespace Program3
             AddingBinaries addingBinaries = new AddingBinaries();
             string binary1 = addingBinaries.FloatToBinary(number1);
             string binary2 = addingBinaries.FloatToBinary(number2);
-            Console.WriteLine(binary1+" "+binary2);
             string binary = addingBinaries.AddingTwoBinaries(binary1, binary2);
             inputOutput.DisplayOutput(addingBinaries.BinaryToFloat(binary));
         }
