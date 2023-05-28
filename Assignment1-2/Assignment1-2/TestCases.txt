@@ -1,1 +1,7 @@
-﻿
+﻿TestCases
+
+1.input is not given --negative testcase
+2.input contains no. of digits less than four --negative testcase
+3.inputs starting contains 0's and then contains no. of digits less than four --negative testcase
+4.input contains no.of digits more than or equal to four and only integers --positive testcase
+5. input contains other than number --negative testcase
