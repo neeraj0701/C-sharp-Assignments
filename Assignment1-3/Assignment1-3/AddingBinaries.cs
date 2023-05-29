@@ -1,8 +1,16 @@
 ﻿using System;
 using Program3;
 
+/// <summary>
+/// class contains all methods that implement solution
+/// </summary>
 public class AddingBinaries
 {
+    /// <summary>
+    /// convert float number to binary
+    /// </summary>
+    /// <param name="number"></param>
+    /// <returns></returns>
     public string FloatToBinary(float number)
     {
         string chars = number.ToString();
@@ -37,6 +45,12 @@ public class AddingBinaries
         return binary;
     }
 
+    /// <summary>
+    /// adds two binaries
+    /// </summary>
+    /// <param name="number1"></param>
+    /// <param name="number2"></param>
+    /// <returns></returns>
     public string AddingTwoBinaries(string number1, string number2)
     {
         string number11 = number1.Substring(0, number1.IndexOf('.'));
@@ -108,6 +122,11 @@ public class AddingBinaries
         return number;
     }
 
+    /// <summary>
+    /// converts binary to float
+    /// </summary>
+    /// <param name="number"></param>
+    /// <returns></returns>
     public float BinaryToFloat(string number)
     {
         int number1 = 0;

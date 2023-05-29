@@ -2,9 +2,17 @@
 
 namespace Program3
 {
-    internal class Program
+    /// <summary>
+    /// class that contains main method
+    /// </summary>
+    public class Program
     {
-        static void Main(string[] args)
+
+        /// <summary>
+        /// execution start from main method 
+        /// </summary>
+        /// <param name="args"></param>
+        public static void Main(string[] args)
         {
             InputOutput inputOutput = new InputOutput();
             AddingBinaries addingBinaries = new AddingBinaries();
