@@ -1,0 +1,7 @@
+﻿TestCases:-
+
+1.given inputs lengths should be greater than 0 --positive testcase
+2.given inputs should contains both integer and decimal part --positive testcase
+3.given inputs lengths are 0 --negative testcase
+4.given inputs contains only integer part --negative testcase
+5.inputs contains other than float --negative testcase
