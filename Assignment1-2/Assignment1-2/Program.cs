@@ -15,9 +15,9 @@ namespace Program2
         public static void Main(string[] args)
         {
             InputOutput inputOutput = new InputOutput();
+            Validation validate = new Validation();
             GreatestProduct greatestProduct = new GreatestProduct();
             BigInteger bigInteger = BigInteger.Parse(inputOutput.Input());
-            Validation validate = new Validation();
 
             if (validate.IsValid(bigInteger))
             {
