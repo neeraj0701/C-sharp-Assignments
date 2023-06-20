@@ -14,7 +14,7 @@ public class InputOutput
     {
         Console.WriteLine("enter the first decimal value");
         return float.Parse(Console.ReadLine());
-    
+
     }
 
     /// <summary>
