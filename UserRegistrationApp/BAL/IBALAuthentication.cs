@@ -12,20 +12,20 @@ namespace BAL
         /// </summary>
         /// <param name="userObj"></param>
         /// <returns></returns>
-        int Registration(User userObj);
+        string Registration(User userObj);
 
         /// <summary>
         /// validate the login details
         /// </summary>
         /// <param name="userObj"></param>
         /// <returns></returns>
-        int Login(User userObj);
+        string Login(User userObj);
 
         /// <summary>
         /// checks user exists and update the password
         /// </summary>
         /// <param name="userObj"></param>
         /// <returns></returns>
-        int ForgotPassword(User userObj);
+        string ForgotPassword(User userObj);
     }
 }

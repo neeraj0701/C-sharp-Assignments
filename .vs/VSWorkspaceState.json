@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\UserRegistrationApp",
+    "\\UserRegistrationApp\\Web Application"
   ],
-  "SelectedNode": "\\C:\\Users\\Neeraj Potlapalli\\Source\\Repos\\C-sharp-Assignments",
+  "SelectedNode": "\\UserRegistrationApp\\Web Application\\Login.aspx",
   "PreviewInSolutionExplorer": false
 }

@@ -13,8 +13,9 @@
         public string loginSucessful = "Main.aspx";
         public string userNotExist = "User Does Not Exist";
         public string passwordupdated = "Login.aspx";
-        public string insertData = "Registration Details is not inserted";
-        public string fetchData = "Login Details is not fetched";
-        public string UpdateData = "Password is not updated";
+        public string invalidCast = "invalid casting exception occured";
+        public string invalidOperation = "invalid operation exception occured";
+        public string iOException = "input output exception occured";
+        public string sqlException = "sql exception exception occured";
     }
 }

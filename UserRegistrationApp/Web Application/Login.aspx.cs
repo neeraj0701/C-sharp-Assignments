@@ -9,11 +9,6 @@ namespace Application_Layer
     /// </summary>
     public partial class Login : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
         /// <summary>
         /// user clicks the button it's validates and send data to Login method
         /// </summary>
@@ -26,23 +21,35 @@ namespace Application_Layer
             IBALAuthentication bALObj = new BALFactory().GetBALAuthObj();
             Literals literals = new Literals();
             User userObj = new User() { UserName = _username, Password = _password };
-            int result = bALObj.Login(userObj);
+            string result = bALObj.Login(userObj);
 
-            if (result == 0)
+            if (result == "login successful")
             {
                 Response.Redirect(literals.loginSucessful);
             }
-            else if (result == 1)
+            else if (result == "incorrect username")
             {
                 Response.Write("<script>alert('" + literals.incorrectUserName + "')</script>");
             }
-            else if (result == 2)
+            else if (result == "incorrect password")
             {
                 Response.Write("<script>alert('" + literals.incorrectPassword + "')</script>");
             }
+            else if (result == "Invalid Cast Exception")
+            {
+                Response.Write("<script>alert('" + literals.invalidCast + "')</script>");
+            }
+            else if (result == "Invalid Operation Exception")
+            {
+                Response.Write("<script>alert('" + literals.invalidOperation + "')</script>");
+            }
+            else if (result == "Input Output Exception")
+            {
+                Response.Write("<script>alert('" + literals.iOException + "')</script>");
+            }
             else
             {
-                Response.Write("<script>alert('" + literals.fetchData + "')</script>");
+                Response.Write("<script>alert('" + literals.sqlException + "')</script>");
             }
         }
     }

@@ -3,6 +3,8 @@ using System.Configuration;
 using System.Data;
 using BusinessModel;
 using System.Collections.Generic;
+using System;
+using System.IO;
 
 namespace DAL
 {
@@ -16,7 +18,7 @@ namespace DAL
         /// </summary>
         /// <param name="userObj"></param>
         /// <returns></returns>
-        public int SaveRegistrationDetails(User userObj)
+        public string SaveRegistrationDetails(User userObj)
         {
             try
             {
@@ -31,11 +33,23 @@ namespace DAL
                 command.Parameters.AddWithValue("password", userObj.Password);
                 command.ExecuteNonQuery();
                 conn.Close();
-                return 0;
+                return "registration successful";
             }
-            catch (SqlException e)
+            catch (InvalidCastException)
             {
-                return 2;
+                return "Invalid Cast Exception";
+            }
+            catch (InvalidOperationException)
+            {
+                return "Invalid Operation Exception";
+            }
+            catch (IOException)
+            {
+                return "Input Output Exception";
+            }
+            catch (SqlException)
+            {
+                return "Sql Exception";
             }
         }
 
@@ -61,9 +75,24 @@ namespace DAL
                 list[1] = row[1].ToString();
                 return list;
             }
-            catch (SqlException e)
+            catch (InvalidCastException)
             {
-                list[2] = e.Message;
+                list[2] = "Invalid Cast Exception";
+                return list;
+            }
+            catch (InvalidOperationException)
+            {
+                list[2] = "Invalid Operation Exception";
+                return list;
+            }
+            catch (IOException)
+            {
+                list[2] = "Input Output Exception";
+                return list;
+            }
+            catch (SqlException)
+            {
+                list[2] = "Sql Exception";
                 return list;
             }
         }
@@ -73,7 +102,7 @@ namespace DAL
         /// </summary>
         /// <param name="userObj"></param>
         /// <returns></returns>
-        public int UpdatePassword(User userObj)
+        public string UpdatePassword(User userObj)
         {
             try
             {
@@ -88,12 +117,25 @@ namespace DAL
                 DataRow row = dataTable.Rows[0];
                 row["password"] = userObj.Password;
                 adapter.Update(dataTable);
-                return 0;
+                return "password updated";
             }
-            catch (SqlException e)
+            catch (InvalidCastException)
             {
-                return 2;
+                return "Invalid Cast Exception";
             }
+            catch (InvalidOperationException)
+            {
+                return "Invalid Operation Exception";
+            }
+            catch (IOException)
+            {
+                return "Input Output Exception";
+            }
+            catch (SqlException)
+            {
+                return "Sql Exception";
+            }
+
         }
     }
 }

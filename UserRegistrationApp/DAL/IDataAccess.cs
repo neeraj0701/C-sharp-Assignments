@@ -10,7 +10,7 @@ namespace DAL
         /// </summary>
         /// <param name="userObj"></param>
         /// <returns></returns>
-        int SaveRegistrationDetails(User userObj);
+        string SaveRegistrationDetails(User userObj);
 
         /// <summary>
         /// fetch the login details
@@ -24,6 +24,6 @@ namespace DAL
         /// </summary>
         /// <param name="userObj"></param>
         /// <returns></returns>
-        int UpdatePassword(User userObj);
+        string UpdatePassword(User userObj);
     }
 }

@@ -19,7 +19,7 @@ namespace BAL
         /// <param name="mobile"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public int Registration(User userObj)
+        public string Registration(User userObj)
         {
             userObj.Password = DataPrivacy.EncryptDecrypt(userObj.Password, 200);
             IDataAccess dataObj = new DALFactory().GetDataAccessObj();
@@ -30,7 +30,7 @@ namespace BAL
             }
             else
             {
-                return 1;
+                return "username exist";
             }
         }
 
@@ -40,7 +40,7 @@ namespace BAL
         /// <param name="username"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public int Login(User userObj)
+        public string Login(User userObj)
         {
             IDataAccess dataObj = new DALFactory().GetDataAccessObj();
             List<string> data = dataObj.FetchLoginDetails(userObj);
@@ -51,21 +51,21 @@ namespace BAL
                 {
                     if (DataPrivacy.EncryptDecrypt(data[1], 200) != userObj.Password)
                     {
-                        return 2;
+                        return "incorrect password";
                     }
                     else
                     {
-                        return 0;
+                        return "login successful";
                     }
                 }
                 else
                 {
-                    return 1;
+                    return "incorrect username";
                 }
             }
             else
             {
-                return 3;
+                return data[2];
             }
         }
 
@@ -75,7 +75,7 @@ namespace BAL
         /// <param name="username"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public int ForgotPassword(User userObj)
+        public string ForgotPassword(User userObj)
         {
             userObj.Password = DataPrivacy.EncryptDecrypt(userObj.Password, 200);
             IDataAccess dataObj = new DALFactory().GetDataAccessObj();
@@ -86,7 +86,7 @@ namespace BAL
             }
             else
             {
-                return 1;
+                return "user not exist";
             }
         }
     }

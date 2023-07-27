@@ -9,11 +9,6 @@ namespace Application_Layer
     /// </summary>
     public partial class ForgotPassword : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
         /// <summary>
         /// user clicks the button it's validates and send data to BALAuthentcation class
         /// </summary>
@@ -21,27 +16,37 @@ namespace Application_Layer
         /// <param name="e"></param>
         protected void ForgotPassword_Click(object sender, EventArgs e)
         {
-            string _username = username.Text.Trim();
-            string _password = password.Text.Trim();
             Literals literals = new Literals();
 
             if (password.Text == confirmPassword.Text)
             {
-                User userObj = new User() { UserName = _username, Password = _password };
+                User userObj = new User() { UserName = username.Text, Password = password.Text };
                 IBALAuthentication bALObj = new BALFactory().GetBALAuthObj();
-                int result = bALObj.ForgotPassword(userObj);
+                string result = bALObj.ForgotPassword(userObj);
 
-                if (result == 0)
+                if (result == "password updated")
                 {
                     Response.Redirect(literals.passwordupdated);
                 }
-                else if (result == 1)
+                else if (result == "user not exist")
                 {
                     Response.Write("<script>alert('" + literals.userNotExist + "')</script>");
                 }
+                else if (result == "Invalid Cast Exception")
+                {
+                    Response.Write("<script>alert('" + literals.invalidCast + "')</script>");
+                }
+                else if (result == "Invalid Operation Exception")
+                {
+                    Response.Write("<script>alert('" + literals.invalidOperation + "')</script>");
+                }
+                else if (result == "Input Output Exception")
+                {
+                    Response.Write("<script>alert('" + literals.iOException + "')</script>");
+                }
                 else
                 {
-                    Response.Write("<script>alert('" + literals.UpdateData + "')</script>");
+                    Response.Write("<script>alert('" + literals.sqlException + "')</script>");
                 }
 
             }
