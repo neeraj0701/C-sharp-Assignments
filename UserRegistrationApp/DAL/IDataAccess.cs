@@ -17,7 +17,7 @@ namespace DAL
         /// </summary>
         /// <param name="userObj"></param>
         /// <returns></returns>
-        List<List<string>> FetchLoginDetails(User userObj);
+        List<string> FetchLoginDetails(User userObj);
 
         /// <summary>
         /// update the password

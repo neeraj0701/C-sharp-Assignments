@@ -44,7 +44,7 @@ namespace DAL
         /// </summary>
         /// <param name="userObj"></param>
         /// <returns></returns>
-        public List<List<string>> FetchLoginDetails(User userObj)
+        public List<string> FetchLoginDetails(User userObj)
         {
             try
             {
@@ -55,13 +55,8 @@ namespace DAL
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
-                List<List<string>> list = new List<List<string>>();
-
-                foreach (DataRow row in dataTable.Rows)
-                {
-                    List<string> strings = new List<string>() { row[0].ToString(), row[1].ToString() };
-                    list.Add(strings);
-                }
+                DataRow row = dataTable.Rows[0];
+                List<string> list = new List<string>() { row[0].ToString(), row[1].ToString() };
                 return list;
             }
             catch (SqlException e)

@@ -43,11 +43,11 @@ namespace BAL
         public int Login(User userObj)
         {
             IDataAccess dataObj = new DALFactory().GetDataAccessObj();
-            List<List<string>> data = dataObj.FetchLoginDetails(userObj);
+            List<string> data = dataObj.FetchLoginDetails(userObj);
 
             if (data.Count > 0)
             {
-                if (DataPrivacy.EncryptDecrypt(data[0][1], 200) != userObj.Password)
+                if (DataPrivacy.EncryptDecrypt(data[1], 200) != userObj.Password)
                 {
                     return 2;
                 }
