@@ -1,0 +1,6 @@
+C:\Users\Neeraj Potlapalli\source\repos\UserRegistrationApp\BusinessModel\bin\Debug\BusinessModel.dll
+C:\Users\Neeraj Potlapalli\source\repos\UserRegistrationApp\BusinessModel\bin\Debug\BusinessModel.pdb
+C:\Users\Neeraj Potlapalli\source\repos\UserRegistrationApp\BusinessModel\obj\Debug\BusinessModel.csproj.AssemblyReference.cache
+C:\Users\Neeraj Potlapalli\source\repos\UserRegistrationApp\BusinessModel\obj\Debug\BusinessModel.csproj.CoreCompileInputs.cache
+C:\Users\Neeraj Potlapalli\source\repos\UserRegistrationApp\BusinessModel\obj\Debug\BusinessModel.dll
+C:\Users\Neeraj Potlapalli\source\repos\UserRegistrationApp\BusinessModel\obj\Debug\BusinessModel.pdb

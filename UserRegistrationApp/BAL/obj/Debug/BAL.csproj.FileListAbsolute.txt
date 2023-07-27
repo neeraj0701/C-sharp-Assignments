@@ -1,0 +1,11 @@
+C:\Users\Neeraj Potlapalli\source\repos\UserRegistrationApp\BAL\bin\Debug\BAL.dll
+C:\Users\Neeraj Potlapalli\source\repos\UserRegistrationApp\BAL\bin\Debug\BAL.pdb
+C:\Users\Neeraj Potlapalli\source\repos\UserRegistrationApp\BAL\bin\Debug\DAL.dll
+C:\Users\Neeraj Potlapalli\source\repos\UserRegistrationApp\BAL\bin\Debug\DAL.pdb
+C:\Users\Neeraj Potlapalli\source\repos\UserRegistrationApp\BAL\obj\Debug\BAL.csproj.AssemblyReference.cache
+C:\Users\Neeraj Potlapalli\source\repos\UserRegistrationApp\BAL\obj\Debug\BAL.csproj.CoreCompileInputs.cache
+C:\Users\Neeraj Potlapalli\source\repos\UserRegistrationApp\BAL\obj\Debug\BAL.csproj.CopyComplete
+C:\Users\Neeraj Potlapalli\source\repos\UserRegistrationApp\BAL\obj\Debug\BAL.dll
+C:\Users\Neeraj Potlapalli\source\repos\UserRegistrationApp\BAL\obj\Debug\BAL.pdb
+C:\Users\Neeraj Potlapalli\source\repos\UserRegistrationApp\BAL\bin\Debug\BusinessModel.dll
+C:\Users\Neeraj Potlapalli\source\repos\UserRegistrationApp\BAL\bin\Debug\BusinessModel.pdb
