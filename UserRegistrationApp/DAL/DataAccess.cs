@@ -46,6 +46,7 @@ namespace DAL
         /// <returns></returns>
         public List<string> FetchLoginDetails(User userObj)
         {
+            List<string> list = new List<string>();
             try
             {
                 string connectionString = ConfigurationManager.ConnectionStrings["conString"].ConnectionString;
@@ -56,12 +57,14 @@ namespace DAL
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
                 DataRow row = dataTable.Rows[0];
-                List<string> list = new List<string>() { row[0].ToString(), row[1].ToString() };
+                list[0] = row[0].ToString();
+                list[1] = row[1].ToString();
                 return list;
             }
             catch (SqlException e)
             {
-                throw e;
+                list[2] = e.Message;
+                return list;
             }
         }
 

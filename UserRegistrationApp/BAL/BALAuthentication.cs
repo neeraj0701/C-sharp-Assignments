@@ -45,20 +45,27 @@ namespace BAL
             IDataAccess dataObj = new DALFactory().GetDataAccessObj();
             List<string> data = dataObj.FetchLoginDetails(userObj);
 
-            if (data.Count > 0)
+            if (data[2] != null)
             {
-                if (DataPrivacy.EncryptDecrypt(data[1], 200) != userObj.Password)
+                if (data.Count > 0)
                 {
-                    return 2;
+                    if (DataPrivacy.EncryptDecrypt(data[1], 200) != userObj.Password)
+                    {
+                        return 2;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
                 }
                 else
                 {
-                    return 0;
+                    return 1;
                 }
             }
             else
             {
-                return 1;
+                return 3;
             }
         }
 
